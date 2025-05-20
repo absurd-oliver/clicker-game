@@ -3,6 +3,7 @@ let counter = 0;
 let extra = 0;
 let multi = 1;
 let autoClickers = 0;
+let logCounter = 0;
 
 let extracost = 1;
 let multicost = 5;
@@ -10,6 +11,8 @@ let autoclickcost = 20;
 
 let darkMode = false;
 let devMode = false;
+
+let devLoggedIn = false;
 
 // UI elements
 const counterDisplay = document.getElementById("counter");
@@ -129,14 +132,21 @@ themeToggleBtn.addEventListener("click", () => {
 
 // Developer prompt
 devPromptBtn.addEventListener("click", () => {
+  if (devLoggedIn === false){
   log("[Dev] Prompted for password");
   const pass = prompt("Enter developer password:");
   if (pass === "1234") {
+    devLoggedIn = true;
     devMode = true;
     devTools.classList.remove("hidden");
     log("[Dev] Access granted");
   } else {
     log("[Dev] Access denied (incorrect password)");
+  }
+  } else {
+    log("[dev] Logged out of DevMode");
+    devLoggedIn = false;
+    devTools.classList.add("hidden");
   }
 });
 
@@ -158,10 +168,16 @@ setInterval(() => {
   if (autoClickers > 0) {
     const clicks = (multi + extra) * autoClickers;
     counter += clicks;
-    log(`[Auto] Added ${clicks} points from ${autoClickers} auto-clicker(s)`);
+    logCounter += 1;
+    if (logCounter === 10){
+      log(`[Auto] Added ${10*clicks} points from ${autoClickers} auto-clicker(s)`);
+      logCounter = 0;
+    }
     updateUI();
   }
 }, 1000);
+
+// log(`[Auto] Added ${clicks} points from ${autoClickers} auto-clicker(s)`);
 
 // Init
 loadGame();
