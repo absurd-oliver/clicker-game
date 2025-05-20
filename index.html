@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clicker Game</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="code.js" defer></script>
+</head>
+<body>
+  <div class="container">
+    <p id="counter" class="counter">Counter: 0</p>
+    <p id="clickValue">+0 per click</p>
+    <p id="cps">0 clicks/sec</p>
+    
+    <button id="clickBtn">Click</button>
+
+    <div class="shop">
+      <h2>Shop</h2>
+      <button id="buyExtra">+1 Extra (<span id="extraCost">1</span>)</button>
+      <button id="buyMulti">+1 Multi (<span id="multiCost">5</span>)</button>
+      <button id="buyAuto">+1 Auto Clicker (<span id="autoCost">20</span>)</button>
+    </div>
+
+    <button id="toggleTheme">Toggle Theme</button>
+  </div>
+
+  <!-- Developer Access & Tools -->
+  <div class="dev-section">
+    <button id="devAccessBtn">Developer Access</button>
+
+    <div id="devTools" class="hidden">
+      <button id="resetBtn">Reset Game</button>
+      <div id="logContainer">
+        <h2>Developer Log</h2>
+        <pre id="logOutput"></pre>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
