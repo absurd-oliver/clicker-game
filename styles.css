@@ -91,6 +91,7 @@ button:hover {
 }
 
 #logContainer {
+  transition: 200ms;
   margin-top: 20px;
   max-height: 200px;
   overflow-y: auto;
@@ -105,6 +106,7 @@ button:hover {
 }
 
 body.light #logContainer {
+  transition: 200ms;
   background-color: #f4f4f4;
   color: #000;
   border-color: #ccc;
