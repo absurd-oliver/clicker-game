@@ -9,3 +9,5 @@ once unlocked, it displays every user/clicker interaction
   
 the developper mode also unlocks a reset button and possibly more cheat buttons in the future  
 <sub>the developper mode password is: 1234</sub>
+
+## website: https://absurd-oliver.github.io/clicker-game/
