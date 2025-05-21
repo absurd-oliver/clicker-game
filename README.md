@@ -11,3 +11,7 @@ the developper mode also unlocks a reset button and possibly more cheat buttons 
 <sub>the developper mode password is: 1234</sub>
 
 ## website: https://absurd-oliver.github.io/clicker-game/
+
+## License
+
+This project is licensed under the GNU General Public License v3.0 - see the [LICENSE](./LICENSE) file for details.
